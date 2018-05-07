@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Projeto Evolucional";
+}
+
+<div ng-controller="crudCtrl">
+    <span ng-click="incluirAlunoDiv()" class="btn btn-default">
+        Processar Notas de Alunos
+    </span>
+    <span ng-click="gerarRelatorio()" class="btn btn-default">
+        Gerar Relatório
+    </span>
+    <div class="divList">
+        <p>
+            <b><i>Todos os Alunos cadastrados</i></b>
+        </p>
+        <table class="table table-hover">
+            <tr>
+                <td><b>Aluno</b></td>
+                <td><b>Disciplina</b></td>
+                <td><b>Nota</b></td>
+            </tr>
+            <tr ng-repeat="aluno in alunos">
+                <td>
+                    {{ aluno.Aluno }}
+                </td>
+
+                <td>
+                    {{ aluno.Disciplina }}
+                </td>
+
+                <td>
+                    {{ aluno.Nota }}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
